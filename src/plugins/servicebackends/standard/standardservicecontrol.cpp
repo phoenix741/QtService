@@ -1,11 +1,11 @@
 #include "standardservicecontrol.h"
 #include "standardserviceplugin.h"
 #include <QtCore/QStandardPaths>
-#include <QtCore/QScopeGuard>
 #if QT_CONFIG(process)
 #include <QtCore/QProcess>
 #endif
 #ifdef Q_OS_WIN
+#include <QtCore/QScopeGuard> // Only used on windows, not compatible with debian:10
 #include <QtCore/QThread>
 #include <qt_windows.h>
 #else

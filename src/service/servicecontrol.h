@@ -54,7 +54,7 @@ public:
 		Autostart = (GetAutostart | SetAutostart), //!< SupportFlag::GetAutostart | SupportFlag::SetAutostart
 	};
 	Q_DECLARE_FLAGS(SupportFlags, SupportFlag)
-	Q_FLAG(SupportFlags)
+	// Q_FLAG(SupportFlags) // Not supported on debian:10
 
 	//! The different states a service can be in
 	enum class Status {
